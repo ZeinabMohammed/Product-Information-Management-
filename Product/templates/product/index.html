@@ -1,0 +1,24 @@
+{% extends 'product/base.html' %}
+{% block content %}
+	<br>
+<div class="container ">
+	<div class="row ">
+			
+	 {% for cat in object_list %}	
+		 <div class="col-sm-12 col-md-6 col-lg-4">
+	      <div class="card my-2" style="width: 25rem;">
+			
+			<a href="{% url 'Product:category-detail' cat.name %}">
+			    <h3 class="card-title">{{cat.name}}</h3></a>
+		  </div>
+			
+		 </div>
+	 {% endfor %}
+	</div>
+</div>
+
+	{% include 'product/category_form.html'%}
+	
+
+
+{% endblock %}

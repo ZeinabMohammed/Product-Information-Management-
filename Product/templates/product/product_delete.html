@@ -1,0 +1,8 @@
+<form action="{% url 'Product:product-delete' obj.id %}" 
+				    method="post" style="display: inline;" onsubmit="window.mytest()">
+				    {% csrf_token %}
+				 
+				    <button type="submit" class="btn btn-warning btn-sm">
+				       Delete
+				    </button>
+</form> 
